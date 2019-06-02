@@ -52,7 +52,7 @@ public class Book {
     public void setcost(double cost){
         this.cost=cost;}    
      
-    /* the last part here is to create a toString method that returns all of the details of the book that has been inputted. **/
+    // the last part here is to create a toString method that returns all of the details of the book that has been inputted.
     
     public String toString(){
         return "The details of the book are: " + title + ", " + author + ", " + year + ", " + publisher + ", " + cost;}
