@@ -1,3 +1,6 @@
+// June 1st. 2019
+//@Author Rodrigue.
+
 package Users;
 import java.util.HashMap;
 
