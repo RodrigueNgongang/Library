@@ -21,7 +21,7 @@ public static void main(String args[]){
         //User usr = new User("Rodrigue", "One", "Librarian");
         //boolean flag = lib1.login();
         boolean flag = usr.login();
-        //System.out.println(flag);
+        
         Scanner keyboard = new Scanner(System.in); 
 
         if(!flag){
@@ -37,28 +37,27 @@ public static void main(String args[]){
                      System.out.println("\t3. Issue a book to a member.");
                      System.out.println("\t4. Remove a book from the system.");
                      System.out.println("\t5. Logout.");
-                     System.out.print("Enter the number that applies: ");
+                     System.out.print("Enter your choice : ");
                      int choice = keyboard.nextInt();
                      keyboard.nextLine();
-                     // Determine which command was selected.
                      switch (choice) {
-                     case 1: // 1. Add a book to the system.
+                     case 1: 
                      Book1.addNewBook(Book1);
                      Book2.addNewBook(Book2);
                      break;
-                     case 2: // 2. Search a book from the system.
+                     case 2: 
                      Book2.searchBook(Book2.getTitle());
                      break;
-                     case 3: // 2. Issue a book to a member.
+                     case 3: 
                      //Book1.IssueBook(Book1);
-                     case 4: // 2. Search a book from the system.
+                     case 4: 
                      Book1.delBook(Book1);
                      break;
-                     case 5: // 5. logout the system.
+                     case 5: 
                      usr.logout();
                      break;
-                     default: // Invalid command
-                     System.out.println("That is not a valid command.");
+                     default: 
+                     System.out.println("That is not a valid choice.");
                      }
                      System.out.print("Would you like to exit, Y or N: ");
                      exit = keyboard.nextLine().charAt(0);
@@ -71,21 +70,20 @@ public static void main(String args[]){
                            System.out.println("\t1. Add a Librarian.");
                            System.out.println("\t2. Delete a Librarian.");
                            System.out.println("\t3. Logout.");
-                           System.out.print("Enter the number that applies: ");
+                           System.out.print("Enter your choice : ");
                            int choice = keyboard.nextInt();
                            keyboard.nextLine();
-                           // Determine which command was selected.
                            switch (choice) {
-                           case 1: // 1. Add a Librarian to the system.
+                           case 1: 
                            //addLib();
                            break;
-                           case 2: // 2. Delete a Librarian from the system.
+                           case 2: 
                            //deleteLib();
                            break;
-                           case 3: // 3. logout the system.
+                           case 3: 
                            //logout();
                            break;
-                           default: // Invalid command
+                           default: 
                            System.out.println("That is not a valid command.");
                            }
                             System.out.print("Would you like to exit, Y or N: ");
@@ -99,21 +97,20 @@ public static void main(String args[]){
                              System.out.println("\t1. Request a book.");
                              System.out.println("\t2. Return a book.");
                              System.out.println("\t3. Logout.");
-                             System.out.print("Enter the number that applies: ");
+                             System.out.print("Enter your choice: ");
                              int choice = keyboard.nextInt();
-                             keyboard.nextLine();
-                             // Determine which command was selected.
+                             keyboard.nextLine();                            
                              switch (choice) {
-                             case 1: // 1. Request a book.
+                             case 1: 
                              //Book2.requestBook(Book);
                              break;
-                             case 2: // 2. Return a book.
+                             case 2: 
                              //Book2.returnBook(Book);
                              break;
-                             case 3: // 3. logout the system.
+                             case 3: 
                              //logout();
                              break;
-                             default: // Invalid command
+                             default: 
                              System.out.println("That is not a valid command.");
                              }
                              System.out.print("Would you like to exit, Y or N: ");
