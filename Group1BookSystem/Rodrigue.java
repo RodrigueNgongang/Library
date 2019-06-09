@@ -14,7 +14,7 @@ public class Rodrigue {
 public static void main(String args[]){
 
         Address ad = new Address(12, "Douala", "Kmer");
-        Librarian usr = new Librarian("Armand", "Two", "Librarian", 111, ad);
+        Librarian usr = new Librarian("Rodrigue", "One", "Librarian", 111, ad);
         Book Book1 = new Book("L'Urgence de la pensee", "Maurice Kamto", "124EBN125");
         Book Book2 = new Book("Starting Out with Java", "Tony Gaddis", "0133957055");
         //BookHandler bh = new BookHandler();
