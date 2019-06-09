@@ -1,5 +1,5 @@
 //@Version June 1st. 2019
-//@Author Rodrigue.
+//@Author Rodrigue Ngongang.
 
 package Book;
 import java.util.Scanner;
@@ -70,11 +70,11 @@ public class Book {
        System.out.println("You wish to delete a book.");
        if(count>0){
        books.remove(book);
-       System.out.println(book.author + " Removed");
+       System.out.println(book.title + " of " + book.author + " Removed");
        count--;
        }else{
        System.out.println("No Book available");       
-       System.out.println("Total books in the library: "+count); 
+       System.out.println("Total books in the library: " + count); 
         } 
        } 
   public void searchBook(String title){
