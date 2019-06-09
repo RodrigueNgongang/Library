@@ -1,5 +1,5 @@
 //@Version June 1st. 2019
-//@Author Rodrigue.
+//@Author Rodrigue Ngongang.
 
 package User;
 import java.util.ArrayList;
@@ -33,6 +33,7 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+    
     public static List<User> UserDB(){
         List<User> usr = new ArrayList<>();
         usr.add(new User("Rodrigue", "One", "Librarian"));
@@ -41,7 +42,7 @@ public class User {
         return usr;
     }
 
- public boolean login(){
+   public boolean login(){
       List<User> cnx_map = UserDB();
       boolean x=false;
       for(User usr : cnx_map) {
@@ -58,7 +59,7 @@ public class User {
           return x;
           }
 
- public void logout(){
+  public void logout(){
       System.exit(0);
       }
   }
