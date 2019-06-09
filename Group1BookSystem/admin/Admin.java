@@ -1,5 +1,5 @@
 // June 1st. 2019
-//@Author Rodrigue.
+//@Author Rodrigue Ngongang.
 
 package admin;
 import User.*;
