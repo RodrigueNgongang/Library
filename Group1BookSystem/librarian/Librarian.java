@@ -9,8 +9,8 @@ import Book.*;
 public class Librarian extends User {
     public int libId;
     public Address libAdress;
+	
     public Librarian(String login, String pwd, String func, int id, Address addr){
-	//System.out.println("Constructor of Child");
        super(login, pwd, func); 
        libId = id;
        libAdress = addr;
