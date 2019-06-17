@@ -2,93 +2,77 @@
 //@Author Rodrigue Ngongang.
 
 package Book;
-import java.util.Scanner;
+import member.*;
+import java.util.Iterator;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Iterator; 
+import java.time.LocalDate; 
 
 /* interface MyBook{
+ 
    public void addBook ();
    public void editBook ();
    public void deleteBook();
    public void searchLibrary();
 } */
 
-public class Book {
-
-   final static int maxBook = 10; 
-   static int numBooks = 0;  
-   public int count = 0;                 
-   public String title;
-   public String author;
-   public String isbn;
-   public ArrayList<Book> books = new ArrayList<Book>();
+public class Book extends BookHandler {
+                 
+   private String title;
+   private String author;
+   private String isbn;
+   private boolean status = false;
     
-   public Book (String titre, String auteur, String id){
+   public Book (String titre, String auteur, String id, boolean status){
+       super(titre,auteur,id);
        this.title = titre;
        this.author = auteur;
        this.isbn = id;
-   }
+       this.status = status ;
+       }
     
+  public boolean getStatus(){
+       return status;
+       } 
+  public void setStatus(boolean status){
+       this.status = status;
+       }
   public String getTitle(){
-        return title;}
-    
+        return title;
+       } 
   public String getAuthor(){
-        return author;}
+        return author;
+       }
     
   public String getIsbn(){
-        return isbn;}
-    
+       return isbn;
+       }
   public void setTitle(String title){
-        this.title=title;}
-    
+       this.title=title;
+       } 
   public void setAuthor(String author){
-       this.author=author;}
-   
+       this.author=author;
+       }
   public void setIsbn(String id){
-       this.isbn=id;}
-
- public void addNewBook(Book newbook){  
-      Book newBook = newbook;
-      addBook(newBook); 
-      }
-
- public void addBook(Book newBook) {
-     System.out.println("You wish to add a book.");
-     if (numBooks < maxBook){ 
-     books.add(newBook);
-     numBooks = numBooks + 1 ;
-     }
-     System.out.println(newBook.getTitle() + " of " + newBook.getAuthor() + " Added");
-     count = numBooks;
-     System.out.println("Total books in the library: "+ count);
-     } 
-
-   public void delBook(Book newBook) {
-       Book book = newBook;
-       Iterator iter = books.iterator();
-       System.out.println("You wish to delete a book.");
-       if(count>0){
-       books.remove(book);
-       System.out.println(book.title + " of " + book.author + " Removed");
-       count--;
-       }else{
-       System.out.println("No Book available");       
-       System.out.println("Total books in the library: " + count); 
-        } 
+       this.isbn=id;
+       }
+  public void addNewBook(Book newbook){  
+       super.addNewBook(newbook);
+       }
+  public void addBook(Book newBook) {
+      super.addBook(newBook);
+       } 
+  public void delBook(Book newBook) {
+      super.delBook(newBook);
        } 
   public void searchBook(String title){
-     for(Book bk : books) {
-          if(bk.getTitle().equals(title)){
-          System.out.println("book found.");            
-          System.out.println("Author : " + bk.getAuthor() + ", Title : " + bk.getTitle() + ", isbn: " + bk.getIsbn());
-          break;  
-          }else{
-               System.out.println("book was not found."); 
-               }
-          } 
-        }
+      super.searchBook(title);
+      }
+ public void requestBook(Member usr, String title){
+     super.requestBook(usr, title, LocalDate.now());
+     }	
+ public void returnBook(String title){
+     super.returnBook(title);
+     }
 
- }
-
-
+}
