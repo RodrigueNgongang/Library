@@ -17,7 +17,7 @@ public class Member extends User {
        }
 
    public String getUsername() {
-       return super.getUsername() +" the Member";
+       return super.getUsername() + " the Member";
        }
    
    public String getRole() {
