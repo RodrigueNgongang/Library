@@ -2,8 +2,8 @@
 //@Author Rodrigue Ngongang.
 
 package User;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.ArrayList;
 
 public class User {
     private String username;
@@ -14,27 +14,26 @@ public class User {
         this.username = username;
         this.password = password;
         this.role=role;
-    }
+         }
     public String getUsername() {
         return username;
-    }
+        }
     public void setUsername(String username) {
         this.username = username;
-    }
+        }
      public String getRole() {
         return role;
-     }
+        }
    public void setRole(String role) {
         this.role = role;
-    }
+        }
     public String getPassword() {
         return password;
-    }
+        }
     public void setPassword(String password) {
         this.password = password;
-    }
-    
-    public static List<User> UserDB(){
+        }
+    public List<User> UserDB(){
         List<User> usr = new ArrayList<>();
         usr.add(new User("Rodrigue", "One", "Librarian"));
         usr.add(new User("Armand", "Two", "Member"));
@@ -42,7 +41,7 @@ public class User {
         return usr;
     }
 
-   public boolean login(){
+ public boolean login(){
       List<User> cnx_map = UserDB();
       boolean x=false;
       for(User usr : cnx_map) {
@@ -53,13 +52,26 @@ public class User {
           break;  
           }else{
                 x = false;
-                }}
-          if (x) System.out.println("Successfully logged in."); 
-          else System.out.println("Incorrect password");
-          return x;
-          }
+                }
+      }
+        if (x) System.out.println("Successfully logged in."); 
+        else System.out.println("Incorrect password");
+        return x;
+    }
+  
+  public void AddLib(User newlib){
+      List<User> NewLib = UserDB();
+      NewLib.add(newlib);
+      System.out.println(NewLib);    
+      }
 
-  public void logout(){
+  public void DelLib(User rmlib){
+     List<User> _Lib = UserDB();
+     _Lib.add(rmlib);
+     System.out.println(_Lib);    
+     }
+
+ public void logout(){
       System.exit(0);
       }
   }
