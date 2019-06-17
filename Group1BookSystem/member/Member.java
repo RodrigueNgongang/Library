@@ -3,8 +3,8 @@
 
 package member;
 import User.*;
-import adresse.*;
 import Book.*;
+import adresse.*;
 
 public class Member extends User {
     public int membId;
@@ -14,31 +14,33 @@ public class Member extends User {
        super(login, pwd, func); 
        membId = id;
        membAdress = addr;
-   }
+       }
 
    public String getUsername() {
-        return super.getUsername() +" the Member";
-    }
+       return super.getUsername() +" the Member";
+       }
    
    public String getRole() {
-        return super.getRole();
-     }
+       return super.getRole();
+       }
   
    public String getPassword() {
-        return super.getPassword();
-    }
-
+       return super.getPassword();
+       } 
+    
    public int getMembId() {
-        return membId;
-    }
-    public void setMembId(int id) {
-        this.membId = id;
-    }
+       return membId;
+       }
+    
+   public void setMembId(int id) {
+       this.membId = id;
+       }
 
-    public Address getMembAdress() {
-        return membAdress;
-    }
-    public void setMembAdress(Address addr) {
-        this.membAdress = addr;
-    }
+   public Address getMembAdress() {
+       return membAdress;
+       }
+    
+   public void setMembAdress(Address addr) {
+       this.membAdress = addr;
+       }
 }
